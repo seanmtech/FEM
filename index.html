@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<title>FEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/Favicon 16x16.png">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Nunito Sans', sans-serif;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.747)), url("images/discussion-hero.jpg");
+  min-height: 100vh;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+
+<head>
+  <script src="https://kit.fontawesome.com/f4e57522ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" id="home">
+  <div class="w3-bar w3-white w3-card logo-home" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-wide logo-home w3-display-left" >
+      <img class="top-logo" src="images/Nav Icon 50x50.png">
+    </a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button about">ABOUT</a>
+      <a href="#work" class="w3-bar-item w3-button courses"><i class="fa fa-th"></i> COURSES</a>
+      <a href="#pricing" class="w3-bar-item w3-button pricing"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="#contact" class="w3-bar-item w3-button contact-nav"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">COURSES</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+
+<header class="bgimg-1 w3-image w3-display-container hero-text" id="top"> <!-- style="margin-top: 59px"; -->
+  <div class="w3-display-middle w3-center" style="padding:48px">
+    <!-- <span class="w3-jumbo w3-hide-small">FEM</span><br> -->
+    <img class="w3-center" src="images/fem-white.png"><br>
+    <span class="w3-xlarge bold-font pink-text">Female Empowerment Mission</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:32px 16px 64px 16px" id="about">
+  <div class="w3-center">
+    
+      <img src="images/100x100 logo.png">
+    
+  </div>
+  <h3 class="w3-center blue-text bold-font">OUR MISSION</h3>
+  <p class="w3-center w3-large medium-bold-font">FEM offers minority women startup founders in the Great Lakes Region individualized training and seed-funding to create resilient leaders that effectively influence communities.</p>
+  <div class="w3-row-padding w3-center" style="margin-top:32px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center blue-text"></i>
+      <p class="w3-large medium-bold-font red-text">EDUCATION</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo blue-text"></i>
+      <p class="w3-large medium-bold-font red-text">COMMUNITY</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fas fa-fist-raised w3-margin-bottom w3-jumbo blue-text"></i>
+      <p class="w3-large medium-bold-font red-text">DIVERSITY</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fas fa-handshake w3-margin-bottom w3-jumbo blue-text"></i>
+      <p class="w3-large medium-bold-font red-text">NETWORKING</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We empower entrepreneurs" -->
+<div class="w3-container promo" style="padding: 64px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 class="bold-font">OUR VISION</h3>
+      <p class="medium-bold-font">FEM envisions a world that welcomes innovative female-run companies and celebrates diversity within all workplaces.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Services</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large w3-grayscale" src="images/gray-suit-woman-smaller.jpg" alt="woman entrepreneur" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-third">
+    <span class="w3-xxlarge">120+</span>
+    <br>Courses
+  </div>
+  <div class="w3-third">
+    
+    <span class="w3-xxlarge">6</span>
+    <br>States
+  </div>
+  <div class="w3-third">
+    <span class="w3-xxlarge">25+</span>
+    <br>Member Benefits
+  </div>
+  <!-- <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div> -->
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:64px 16px" id="work">
+  <h3 class="w3-center bold-font red-text">COURSES</h3>
+  <p class="w3-center w3-large medium-bold-font">We can teach you how to launch your idea.</p>
+
+  <div class="w3-row-padding">
+    <div class="w3-quarter w3-container w3-margin-bottom">
+      <img src="images/finance-smaller.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity w3-grayscale">
+      <div class="w3-container w3-white">
+        <p><b>Financial Planning for Entrepreneurs</b></p>
+        <p>Introduction and practice for implementing a financial plan for a new business.</p>
+      </div>
+    </div>
+    <div class="w3-quarter w3-container w3-margin-bottom">
+      <img src="images/two-ladies-notebooks-smaller.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity w3-grayscale">
+      <div class="w3-container w3-white">
+        <p><b>Employee Rights</b></p>
+        <p>This course examines how to acknowledge employee rights as a leader in a way that builds trust and respect.</p>
+      </div>
+    </div>
+    <div class="w3-quarter w3-container">
+      <img src="images/group-hands-smaller.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity w3-grayscale">
+      <div class="w3-container w3-white">
+        <p><b>Business Ethics in the 21st Century</b></p>
+        <p>This course is designed to help new businesses stay ethical in the 21st Century.</p>
+      </div>
+    </div>
+    <div class="w3-quarter w3-container w3-margin-bottom">
+      <img src="images/two-hands-smaller.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity w3-grayscale">
+      <div class="w3-container w3-white">
+        <p><b>Equal Employment Opportunity</b></p>
+        <p>This course provides a foundation for a new business to establish non bias staffing practices and welcome diversity.</p>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3 class="bold-font">PRICING</h3>
+  <p class="w3-large medium-bold-font">Choose a pricing plan that fits your needs.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="purple w3-xlarge w3-padding-32 medium-bold-font">INVESTORS</li>
+        <li class="w3-padding-16"><b>Early Access</b> to startups seeking funding</li>
+        <li class="w3-padding-16"><b>Advertising</b> on FEM website and materials</li>
+        <li class="w3-padding-16"><b>Exclusive Use</b> of Non-Bias Hiring Platform / Training</li>
+        <li class="w3-padding-16"><b>Matching Program</b> to increase portfolio diversification</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">+$80k</h2>
+          <span class="w3-opacity">per investment round</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Learn More & Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="red w3-xlarge w3-padding-48 medium-bold-font">ENTREPRENEURS</li>
+        <li class="w3-padding-16"><b>120+</b> Courses</li>
+        <li class="w3-padding-16"><b>Personal</b> Mentorships</li>
+        <li class="w3-padding-16"><b>Exclusive & Diverse</b> Fundraising Opportunties</li>
+        <li class="w3-padding-16"><b>Community</b> Slack Channel updated with local resources</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 2,000</h2>
+          <span class="w3-opacity">per year</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Learn More & Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="purple w3-xlarge w3-padding-32 medium-bold-font">STUDENTS</li>
+        <li class="w3-padding-16"><b>Personalized</b> mentorship with local professionals</li>
+        <li class="w3-padding-16"><b>Access</b> to private resumé pool</li>
+        <li class="w3-padding-16"><b>Local</b> internship opportunities</li>
+        <li class="w3-padding-16"><b>FEM</b> Professional Clothing Bank discount</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">FREE</h2>
+          <span class="w3-opacity">with .edu email</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Learn More & Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Founders Section -->
+
+<!-- Experimental Code -->
+
+<div class="w3-container w3-padding-32 promo">
+  <h3 class="w3-center w3-padding-16 bold-font promo">Meet the Founders.</h3>
+  <p class=" w3-center w3-large medium-bold-font">In 2020, a team of creatives thought up the idea of the Female Empowerment Mission. Meet the founders that set out to diversify the Great Lakes startup environment.</p>
+</div>
+
+<div class="w3-row-padding promo">
+
+  <div class="w3-col l1 w3-margin-bottom promo"></div> <!-- Invisible column to help center founder cards -->
+
+  <div class="w3-col l2 m6 w3-margin-bottom promo" >
+    <img src="images/Christina_300x300.png" alt="Christina" style="width:100%">
+    <h3>Christina Rivas</h3>
+    <p class="w3-opacity">Business Analyst</p>
+    <p>Christina Rivas is a senior pursuing a bachelor’s degree in Mechanical Engineering at UW-Madison. 
+      She is the President of the Society of Hispanic Professional Engineers and is passionate about increasing the diversity within STEM.</p>
+    
+  </div>
+  <div class="w3-col l2 m6 w3-margin-bottom promo" >
+    <img src="images/Issac_300x300.png"" alt="Jane" style="width:100%">
+    <h3>Isaac Wells-Cage</h3>
+    <p class="w3-opacity">Market Strategist</p>
+    <p>Isaac Wells-Cage is an upcoming sophomore at the University of Wisconsin-Madison. He plans to pursue a degree in Mechanical Engineering, with the goal of working in the renewable energy sector or in mechatronics. 
+      Isaac is passionate about spreading access to information and resources to underrepresented communities. </p>
+    
+  </div>
+  <div class="w3-col l2 m6 w3-margin-bottom promo" >
+    <img src="images/Megan_300x300.png" alt="Mike" style="width:100%">
+    <h3>Megan Huth</h3>
+    <p class="w3-opacity">Brand & Graphic Designer</p>
+    <p>Megan Huth is a junior pursuing a bachelor’s degree in Computer Science and Graphic Design at St. Norbert College. 
+      She is the Marketing and Communication Coordinator for the SNC career center as well as a collegiate athlete on the women’s soccer team. </p>
+    
+  </div>
+  <div class="w3-col l2 m6 w3-margin-bottom promo" >
+    <img src="images/Sean_300x300.png" alt="Dan" style="width:100%">
+    <h3>Sean Mattson</h3>
+    <p class="w3-opacity">Web Developer & Designer</p>
+    <p>Sean Mattson holds a Bachelor’s in Music and is pursuing a second degree in Software & Web Development with the hopes of contributing to the growing tech community in Milwaukee, WI.</p>
+    
+  </div>
+  <div class="w3-col l2 m6 w3-margin-bottom promo">
+    <img src="images/Tatum_300x300.png" alt="Dan" style="width:100%">
+    <h3>Tatum Burazin</h3>
+    <p class="w3-opacity">Project Manager</p>
+    <p>Tatum Burazin is a junior at Marquette University seeking a degree in Operations and Supply Chain.  </p>
+    
+  </div>
+
+  <div class="w3-col l1 m6 w3-margin-bottom promo"></div> <!-- Invisible column to help center founder cards -->
+
+</div>
+
+<!-- Experimental Code -->
+
+<!-- 
+Old founders code -->
+
+<!-- <div class="w3-container promo w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 class="medium-bold-font">Meet the Founders.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+Old founders code -->
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:32px 16px 16px 16px" id="contact">
+  
+  <h3 class="w3-center bold-font">CONTACT</h3>
+  <p class="w3-center w3-large medium-bold-font">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Milwaukee, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <div class="w3-center" style="padding-bottom: 16px;">
+      <img src="images/100x100 logo.png">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#top" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  </footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

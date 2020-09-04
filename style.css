@@ -1,0 +1,114 @@
+
+.hero-text 
+{
+    color: white;
+}
+
+.top-logo
+{
+    margin: none;
+    padding: 0;
+    height: auto;
+    width: auto;
+    border: 1px black;
+}
+
+/* Font Families  */
+
+.regular-font
+{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+}
+
+.medium-bold-font
+{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+
+.bold-font
+{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+}
+
+
+/* Megan's Colors */
+
+.pink
+{
+    background-color: #f1c4dc;
+}
+.purple
+{
+    background-color: #9e85be;
+}
+.red
+{
+    background-color: #ea3a5f;
+}
+.gray
+{
+    background-color: #d2d2d1;
+}
+.blue
+{
+    background-color: #4154a4;
+}
+.blue-text
+{
+    color: #4154a4;
+}
+.red-text
+{
+    color: #ea3a5f;
+}
+.pink-text
+{
+    color: #f1c4dc;;
+}
+.black-text
+{
+    color: black;
+}
+.white
+{
+    background-color: #ffffff;
+}
+
+
+.logo-home
+{
+    padding: 0 0 0 10px !important;
+    position: 0 20px;
+}
+
+.promo
+{
+    background-color: #f1c4dc;
+}
+
+.about:hover
+{
+    background-color: #4154a4 !important;
+    color: white !important;
+}
+
+.courses:hover
+{
+    background-color: #ea3a5f !important;
+    color: white !important;
+}
+
+.pricing:hover
+{
+    background-color: #9e85be !important;
+    color: white !important;
+}
+
+.contact-nav:hover
+{
+    background-color: #ccc !important;
+    color: white !important;
+}
